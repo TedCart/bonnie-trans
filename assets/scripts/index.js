@@ -8,6 +8,7 @@ const translate = require('./translate/events.js')
 $(() => {
   setAPIOrigin(location, config)
   translate.addHandlers()
+  $('#textEncodeText').focus()
 })
 
 // use require with a reference to bundle the file and use it in this file
