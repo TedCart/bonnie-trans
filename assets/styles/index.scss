@@ -7,12 +7,28 @@ body {
   color: #DDD;
 }
 
+div {
+  text-align: center;
+}
+
+form {
+  color: #000;
+  display: inline-block;
+  margin: 3px auto 10px;
+}
+
 input {
   color: #000;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 p {
   border: 2px solid #000;
   border-radius: 4px;
   padding: 2px 8px;
+}
+
+.marginAuto {
+  margin: 10px auto;
 }
