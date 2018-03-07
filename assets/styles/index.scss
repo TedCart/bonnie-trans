@@ -17,6 +17,13 @@ form {
   margin: 3px auto 10px;
 }
 
+h4 {
+  text-align: center;
+  // text-align: justify;
+  // text-align-last: center;
+  // margin-left: 40px;
+}
+
 input {
   color: #000;
   display: inline-block;
@@ -34,4 +41,36 @@ p {
   border-radius: 4px;
   margin: 10px auto;
   padding: 2px 8px 25px;
+}
+
+.plainText {
+  // background: yellow;
+  border-radius: 4px;
+  // color: #000;
+  display: inline-block;
+  padding: 2px;
+}
+
+.codedText {
+  // background: red;
+  border-radius: 4px;
+  // color: #000;
+  display: inline-block;
+  padding: 2px;
+}
+
+.codedNumber {
+  // background: blue;
+  border-radius: 4px;
+  // color: #DDD;
+  display: inline-block;
+  padding: 2px;
+}
+
+.codedSymbol {
+  // background: green;
+  border-radius: 4px;
+  // color: #000;
+  display: inline-block;
+  padding: 2px;
 }

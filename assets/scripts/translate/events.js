@@ -24,7 +24,7 @@ function translateLetter (startLetters, endLetters, oldLetter) {
     return endIsString ? endLetters.charAt(charIndex) : endLetters[charIndex] + '-'
   } else {
     // Adds extra space between number-encoded-words
-    if ((oldLetter === ' ') && (!endIsString)) { return '  ' }
+    if ((oldLetter === ' ') && (!endIsString)) { return ' ' }
     return oldLetter
   }
 }
@@ -40,7 +40,8 @@ function encodeBase (startLetters, endLetters, inputText) {
     numberArray = inputText
     while (oldText !== newText) {
       oldText = numberArray
-      numberArray = numberArray.replace(/ {2}/g, '- -')
+      numberArray = numberArray.replace(/ {2}/g, ' ')
+      numberArray = numberArray.replace(/ {1}/g, '- -')
       newText = numberArray
     }
     numberArray = inputText.split('-')
@@ -49,9 +50,9 @@ function encodeBase (startLetters, endLetters, inputText) {
   for (let i = 0; i < inputText.length; i++) {
     const oldLetter = startIsString ? inputText.charAt(i).toUpperCase() : numberArray[i]
     const newLetter = translateLetter(startLetters, endLetters, oldLetter)
-    if ((!endIsString) && (newLetter === '  ')) {
+    if ((!endIsString) && (newLetter === ' ')) {
       // removes extra hyphen character at end of word
-      newMessage = newMessage.substring(0, newMessage.length - 2)
+      newMessage = newMessage.substring(0, newMessage.length - 1)
     }
     newMessage = newMessage + newLetter
     if ((!endIsString)) {
