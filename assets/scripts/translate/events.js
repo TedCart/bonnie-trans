@@ -25,6 +25,7 @@ function translateLetter (startLetters, endLetters, oldLetter) {
   } else {
     // Adds extra space between number-encoded-words
     if ((oldLetter === ' ') && (!endIsString)) { return ' ' }
+    if (!endIsString) { return oldLetter + '-' }
     return oldLetter
   }
 }
