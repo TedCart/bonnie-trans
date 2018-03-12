@@ -58,7 +58,7 @@ function encodeBase (startLetters, endLetters, inputText) {
     if ((!endIsString)) {
       if (i === inputText.length - 1) {
         // removes extra hyphen character at end of word
-        newMessage = newMessage.substring(0, newMessage.length - 2)
+        newMessage = newMessage.substring(0, newMessage.length - 1)
       }
     }
     if (!startIsString) {
