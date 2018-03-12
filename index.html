@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bonnaroo Translator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container">
+      <header style="text-align:center;">
+        <h1>Bonnaroo Translator</h1>
+        <a href="https://github.com/TedCart/roo-translate" target="_blank" style="background:#ddd;border-radius:4px;padding:4px;font-size:10pt;">GitHub Repo</a>
+      </header>
+      <main class="container">
+        <div class="col-xs-6 marginAuto">
+          <h2>WRITE MESSAGE</h2>
+          <h4>Encode <span class="plainText">Message</span> as <span class="codedText">Text</span></h4>
+          <form id="textEncodeTextForm">
+            <input name="message[text]" type="text" placeholder="Your Text Goes Here" id="textEncodeText">
+            <!-- <input type="submit" class="btn btn-primary" value="Sign In"> -->
+          </form>
+          <!-- <input type="text" id="textEncodeText"> -->
+          <h4>Encode <span class="plainText">Message</span> as <span class="codedNumber">Numbers</span></h4>
+          <form id="textEncodeNumbersForm">
+            <input name="message[text]" type="text" placeholder="Your Text Goes Here" id="textEncodeNumbers">
+          </form>
+          <h4>Encode <span class="plainText">Message</span> as <span class="codedSymbol">Symbols</span></h4>
+          <form id="textEncodeSymbolsForm">
+            <input name="message[text]" type="text" placeholder="Your Text Goes Here" id="textEncodeSymbols">
+          </form>
+        </div>
+        <div class="col-xs-6 marginAuto">
+          <h2>SOVWSO DOTTHJO</h2>
+          <h4>Decode <span class="codedText">Text</span> to <span class="plainText">Message</span></h4>
+          <form id="textDecodeTextForm">
+            <input name="message[text]" type="text" placeholder="Your Text Goes Here" id="textDecodeText">
+          </form>
+          <h4>Decode <span class="codedNumber">Numbers</span> to <span class="plainText">Message</span></h4>
+          <form id="numbersDecodeTextForm">
+            <input name="message[text]" type="text" placeholder="Your Text Goes Here" id="numbersDecodeText">
+          </form>
+          <h4>Decode <span class="codedSymbol">Symbols</span> to <span class="plainText">Message</span></h4>
+          <form id="symbolsDecodeTextForm">
+            <input name="message[text]" type="text" placeholder="Your Text Goes Here" id="symbolsDecodeText">
+          </form>
+        </div>
+      </main>
+      <div class="container">
+        <div class="col-xs-6">
+          <h2>Readable Message</h2>
+          ============
+        </div>
+        <div class="col-xs-6">
+          <h2>Encoded Message</h2>
+          ============
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-xs-6" id="decodedMessageDiv">
+        </div>
+        <div class="col-xs-6" id="encodedMessageDiv">
+        </div>
+      </div>
+    </body>
+</html>
